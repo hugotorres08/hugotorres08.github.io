@@ -4,95 +4,216 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name | Portfolio</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f3f4f6;
       color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: #111827;
+      min-height: 70vh;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
       color: white;
-      padding: 80px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .hero span {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: clamp(42px, 8vw, 72px);
+      margin: 0 0 15px;
     }
 
     header p {
-      font-size: 20px;
-      color: #d1d5db;
+      font-size: 21px;
+      color: #dbeafe;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 8px;
+      padding: 13px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .primary-btn {
+      background: white;
+      color: #1e3a8a;
+    }
+
+    .secondary-btn {
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
     }
 
     nav {
-      background: white;
-      padding: 15px;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(12px);
+      padding: 16px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       position: sticky;
       top: 0;
+      z-index: 100;
     }
 
     nav a {
-      margin: 0 15px;
+      margin: 0 14px;
       text-decoration: none;
       color: #111827;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: -50px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
     }
 
     section {
-      max-width: 900px;
-      margin: 40px auto;
       background: white;
-      padding: 35px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+      margin-bottom: 30px;
+      border: 1px solid #e5e7eb;
     }
 
     h2 {
-      color: #111827;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 10px;
+      font-size: 28px;
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 4px;
+      background: #2563eb;
+      border-radius: 999px;
+      margin-top: 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
     }
 
     .project {
-      margin-bottom: 25px;
+      padding: 24px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.12);
     }
 
     .project h3 {
-      margin-bottom: 5px;
-      color: #2563eb;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #1d4ed8;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .skills span {
       display: inline-block;
-      background: #e5e7eb;
-      padding: 8px 12px;
-      margin: 6px;
-      border-radius: 20px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 9px 14px;
+      border-radius: 999px;
       font-size: 14px;
+      font-weight: 700;
+      border: 1px solid #bfdbfe;
     }
 
     .button {
       display: inline-block;
-      background: #2563eb;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: white;
-      padding: 12px 18px;
-      border-radius: 8px;
+      padding: 13px 20px;
+      border-radius: 10px;
       text-decoration: none;
       margin-top: 10px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    #contact p {
+      margin: 10px 0;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px 20px;
       color: #6b7280;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      section {
+        padding: 28px;
+      }
+
+      main {
+        margin-top: -30px;
+      }
     }
   </style>
 </head>
@@ -100,81 +221,96 @@
 <body>
 
   <header>
-    <h1>Your Name</h1>
-    <p>Engineering Student | Python Developer | MATLAB | AI & Robotics</p>
+    <div class="hero">
+      <span>Personal Portfolio</span>
+      <h1>Your Name</h1>
+      <p>Engineering Student | Python Developer | MATLAB | AI & Robotics</p>
+
+      <div class="hero-buttons">
+        <a class="primary-btn" href="#projects">View Projects</a>
+        <a class="secondary-btn" href="cv.pdf" target="_blank">Download CV</a>
+      </div>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#cv">CV</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an engineering student with interest in programming, artificial intelligence,
-      robotics and problem-solving. I have experience developing projects using Python,
-      MATLAB and web technologies.
-    </p>
-  </section>
+  <main>
 
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Nutrition Tracking App</h3>
+    <section id="about">
+      <h2>About Me</h2>
       <p>
-        A Python and Flask web application for tracking calories, protein,
-        carbohydrates, fat and sugar. The app allows users to create profiles,
-        define goals and register daily food consumption.
+        I am an engineering student with interest in programming, artificial intelligence,
+        robotics and problem-solving. I have experience developing projects using Python,
+        MATLAB and web technologies.
       </p>
-    </div>
+    </section>
 
-    <div class="project">
-      <h3>Dynamic Neural Fields in MATLAB</h3>
-      <p>
-        Development of a Dynamic Neural Field architecture for task monitoring,
-        error detection and learning mechanisms using MATLAB.
-      </p>
-    </div>
+    <section id="projects">
+      <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Personal Portfolio Website</h3>
-      <p>
-        A personal website created with HTML and CSS to present my CV, projects,
-        skills and contact information.
-      </p>
-    </div>
-  </section>
+      <div class="projects-grid">
+        <div class="project">
+          <h3>Nutrition Tracking App</h3>
+          <p>
+            A Python and Flask web application for tracking calories, protein,
+            carbohydrates, fat and sugar. The app allows users to create profiles,
+            define goals and register daily food consumption.
+          </p>
+        </div>
 
-  <section id="cv">
-    <h2>CV</h2>
-    <p>You can download my CV using the button below.</p>
-    <a class="button" href="cv.pdf" target="_blank">Download CV</a>
-  </section>
+        <div class="project">
+          <h3>Dynamic Neural Fields in MATLAB</h3>
+          <p>
+            Development of a Dynamic Neural Field architecture for task monitoring,
+            error detection and learning mechanisms using MATLAB.
+          </p>
+        </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Python</span>
-      <span>Flask</span>
-      <span>MATLAB</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>SQLite</span>
-      <span>Artificial Intelligence</span>
-      <span>Problem Solving</span>
-    </div>
-  </section>
+        <div class="project">
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A personal website created with HTML and CSS to present my CV, projects,
+            skills and contact information.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
-    <p>GitHub: https://github.com/yourusername</p>
-  </section>
+    <section id="cv">
+      <h2>CV</h2>
+      <p>You can download my CV using the button below.</p>
+      <a class="button" href="cv.pdf" target="_blank">Download CV</a>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>MATLAB</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>SQLite</span>
+        <span>Artificial Intelligence</span>
+        <span>Problem Solving</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your.email@example.com</p>
+      <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
+      <p>GitHub: https://github.com/yourusername</p>
+    </section>
+
+  </main>
 
   <footer>
     <p>© 2026 Your Name. All rights reserved.</p>
