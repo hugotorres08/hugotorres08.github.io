@@ -1,28 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>O teu nome - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #111827;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #111827;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+
+    .project {
+      margin-bottom: 25px;
+    }
+
+    .project h3 {
+      margin-bottom: 5px;
+      color: #2563eb;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 8px 12px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #6b7280;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>O teu nome</h1>
-  <p>Welcome to my personal portfolio.</p>
 
-  <h2>About me</h2>
-  <p>Write a short text about yourself here.</p>
+  <header>
+    <h1>Your Name</h1>
+    <p>Engineering Student | Python Developer | MATLAB | AI & Robotics</p>
+  </header>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Nutrition tracking app in Python</li>
-    <li>MATLAB Dynamic Neural Fields project</li>
-  </ul>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <h2>CV</h2>
-  <p><a href="cv.pdf">Download my CV</a></p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am an engineering student with interest in programming, artificial intelligence,
+      robotics and problem-solving. I have experience developing projects using Python,
+      MATLAB and web technologies.
+    </p>
+  </section>
 
-  <h2>Contact</h2>
-  <p>Email: your.email@example.com</p>
-  <p>LinkedIn: your LinkedIn link</p>
-  <p>GitHub: your GitHub link</p>
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Nutrition Tracking App</h3>
+      <p>
+        A Python and Flask web application for tracking calories, protein,
+        carbohydrates, fat and sugar. The app allows users to create profiles,
+        define goals and register daily food consumption.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Dynamic Neural Fields in MATLAB</h3>
+      <p>
+        Development of a Dynamic Neural Field architecture for task monitoring,
+        error detection and learning mechanisms using MATLAB.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        A personal website created with HTML and CSS to present my CV, projects,
+        skills and contact information.
+      </p>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>You can download my CV using the button below.</p>
+    <a class="button" href="cv.pdf" target="_blank">Download CV</a>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>Flask</span>
+      <span>MATLAB</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>SQLite</span>
+      <span>Artificial Intelligence</span>
+      <span>Problem Solving</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
+    <p>GitHub: https://github.com/yourusername</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
