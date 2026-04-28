@@ -45,6 +45,34 @@
       letter-spacing: 0.5px;
     }
 
+    .visualmira-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+    }
+    
+    .visualmira-layout .main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #f8fafc;
+    }
+    
+    .visualmira-layout .side-images {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+    }
+    
+    .visualmira-layout .side-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #f8fafc;
+    }
+  
     header h1 {
       font-size: clamp(42px, 8vw, 72px);
       margin: 0 0 15px;
