@@ -218,7 +218,6 @@
       color: #6b7280;
     }
 
-    /* Modal / Project Details */
     .modal {
       display: none;
       position: fixed;
@@ -396,6 +395,14 @@
           </p>
           <button onclick="openModal('visualmira')">View Details</button>
         </div>
+
+        <div class="project">
+          <h3>Manufacturing of Machined Part</h3>
+          <p>
+            A hands-on manufacturing project focused on producing a mechanical component from a technical drawing using turning and milling processes.
+          </p>
+          <button onclick="openModal('machined-part')">View Details</button>
+        </div>
       </div>
     </section>
 
@@ -432,7 +439,6 @@
     <p>© 2026 Hugo Torres. All rights reserved.</p>
   </footer>
 
-  <!-- MSc Thesis Project Modal -->
   <div id="thesis" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('thesis')">&times;</span>
@@ -484,7 +490,6 @@
     </div>
   </div>
 
-  <!-- Smart Farming System Project Modal -->
   <div id="smart-farming" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('smart-farming')">&times;</span>
@@ -545,7 +550,6 @@
     </div>
   </div>
 
-  <!-- Race Party Project Modal -->
   <div id="race-party" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('race-party')">&times;</span>
@@ -597,7 +601,6 @@
     </div>
   </div>
 
-  <!-- VisualMira Project Modal -->
   <div id="visualmira" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('visualmira')">&times;</span>
@@ -643,6 +646,57 @@
           <h4>Main Difficulties</h4>
           <p>
             The main challenges involved translating a real product development need into a useful software simulation, defining which reticle features should be represented, and making the tool clear enough to support decision-making before manufacturing. Another important difficulty was communicating the technical value of the solution to different audiences, including industry representatives, professors, and students, during the project pitch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="machined-part" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('machined-part')">&times;</span>
+      <h2>Manufacturing of Machined Part</h2>
+
+      <div class="project-image">
+        Add project image here later<br>
+        Example: screenshots/machined-part.png
+      </div>
+
+      <h3>Project Description</h3>
+      <p>
+        Academic project completed during the 2nd year of university, focused on manufacturing a mechanical component from a technical drawing. The work involved interpreting dimensions, tolerances, and geometric features before producing the part using conventional machining processes.
+      </p>
+
+      <p>
+        The component was manufactured through turning and milling operations, providing practical experience with workshop procedures, machine setup, material removal, and dimensional control. The project helped connect mechanical design documentation with real manufacturing constraints and precision requirements.
+      </p>
+
+      <div class="details-grid">
+        <div class="detail-box">
+          <h4>Objective</h4>
+          <p>
+            Manufacture a mechanical part according to a technical drawing, applying conventional turning and milling processes while respecting dimensions, tolerances, and required surface features.
+          </p>
+        </div>
+
+        <div class="detail-box">
+          <h4>Skills Learned</h4>
+          <span class="tag">Technical Drawing</span>
+          <span class="tag">Machining</span>
+          <span class="tag">Turning</span>
+          <span class="tag">Milling</span>
+          <span class="tag">Tolerance Interpretation</span>
+          <span class="tag">Dimensional Control</span>
+          <span class="tag">Manufacturing Processes</span>
+          <span class="tag">Precision Work</span>
+          <span class="tag">Workshop Practice</span>
+          <span class="tag">Attention to Detail</span>
+        </div>
+
+        <div class="detail-box">
+          <h4>Main Difficulties</h4>
+          <p>
+            The main challenges involved accurately interpreting the technical drawing, planning the machining sequence, and maintaining the required dimensions and tolerances throughout the manufacturing process. Another difficulty was working carefully with conventional machining equipment, where small setup errors, tool positioning, or measurement inaccuracies could affect the final quality of the part.
           </p>
         </div>
       </div>
