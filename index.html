@@ -47,29 +47,28 @@
 
     .visualmira-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
       gap: 20px;
       align-items: stretch;
     }
     
     .visualmira-layout .main-img {
       width: 100%;
-      height: 500px;
+      height: auto;
       object-fit: contain;
       border-radius: 16px;
       background: #f8fafc;
     }
     
     .visualmira-layout .side-images {
-      height: 500px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 14px;
     }
     
     .visualmira-layout .side-images img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
       border-radius: 16px;
       background: #f8fafc;
