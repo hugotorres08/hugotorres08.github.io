@@ -264,20 +264,30 @@
       color: #111827;
     }
 
-    .project-image {
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .project-gallery img,
+    .project-gallery video {
       width: 100%;
-      height: 260px;
-      background: linear-gradient(135deg, #dbeafe, #eff6ff);
-      border: 2px dashed #93c5fd;
       border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1d4ed8;
-      font-weight: 700;
-      margin: 20px 0;
-      text-align: center;
-      padding: 20px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+      background: #f8fafc;
+    }
+
+    .project-gallery img {
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .project-gallery video {
+      max-height: 420px;
+      object-fit: contain;
     }
 
     .details-grid {
@@ -315,6 +325,10 @@
 
       .modal-content {
         padding: 28px;
+      }
+
+      .project-gallery img {
+        height: 200px;
       }
     }
   </style>
@@ -469,9 +483,9 @@
       <span class="close" onclick="closeModal('thesis')">&times;</span>
       <h2>Flexible Decision-Making and Error Monitoring in Human-Robot Collaboration</h2>
 
-      <div class="project-image">
-        Add project image here later<br>
-        Example: screenshots/msc-thesis-robotics.png
+      <div class="project-gallery">
+        <img src="assets/projects/thesis-1.jpg" alt="MSc Thesis image 1">
+        <img src="assets/projects/thesis-2.jpg" alt="MSc Thesis image 2">
       </div>
 
       <h3>Project Description</h3>
@@ -520,9 +534,11 @@
       <span class="close" onclick="closeModal('smart-farming')">&times;</span>
       <h2>Smart Farming System</h2>
 
-      <div class="project-image">
-        Add project image here later<br>
-        Example: screenshots/smart-farming-system.png
+      <div class="project-gallery">
+        <video controls>
+          <source src="assets/projects/smart-farming-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <h3>Project Description</h3>
@@ -573,9 +589,9 @@
       <span class="close" onclick="closeModal('race-party')">&times;</span>
       <h2>Race Party — 3rd Place</h2>
 
-      <div class="project-image">
-        Add project image here later<br>
-        Example: screenshots/race-party-car.png
+      <div class="project-gallery">
+        <img src="assets/projects/race-party-1.jpg" alt="Race Party image 1">
+        <img src="assets/projects/race-party-2.jpg" alt="Race Party image 2">
       </div>
 
       <h3>Project Description</h3>
@@ -621,9 +637,10 @@
       <span class="close" onclick="closeModal('visualmira')">&times;</span>
       <h2>VisualMira — 1st Place</h2>
 
-      <div class="project-image">
-        Add project image here later<br>
-        Example: screenshots/visualmira.png
+      <div class="project-gallery">
+        <img src="assets/projects/visualmira-1.jpg" alt="VisualMira image 1">
+        <img src="assets/projects/visualmira-2.jpg" alt="VisualMira image 2">
+        <img src="assets/projects/visualmira-3.jpg" alt="VisualMira image 3">
       </div>
 
       <h3>Project Description</h3>
@@ -671,9 +688,9 @@
       <span class="close" onclick="closeModal('machined-part')">&times;</span>
       <h2>Manufacturing of Machined Part</h2>
 
-      <div class="project-image">
-        Add project image here later<br>
-        Example: screenshots/machined-part.png
+      <div class="project-gallery">
+        <img src="assets/projects/machined-part-1.jpg" alt="Machined part image 1">
+        <img src="assets/projects/machined-part-2.jpg" alt="Machined part image 2">
       </div>
 
       <h3>Project Description</h3>
@@ -719,9 +736,9 @@
       <span class="close" onclick="closeModal('projectile-launcher')">&times;</span>
       <h2>Design and Prototyping of a Projectile Launcher</h2>
 
-      <div class="project-image">
-        Add project image here later<br>
-        Example: screenshots/projectile-launcher.png
+      <div class="project-gallery">
+        <img src="assets/projects/projectile-launcher-1.jpg" alt="Projectile launcher image 1">
+        <img src="assets/projects/projectile-launcher-2.jpg" alt="Projectile launcher image 2">
       </div>
 
       <h3>Project Description</h3>
