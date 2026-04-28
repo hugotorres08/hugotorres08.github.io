@@ -388,6 +388,14 @@
           </p>
           <button onclick="openModal('race-party')">View Details</button>
         </div>
+
+        <div class="project">
+          <h3>VisualMira — 1st Place</h3>
+          <p>
+            A Python-based reticle simulation tool developed with Leica to support product decisions and reduce prototyping cost and time.
+          </p>
+          <button onclick="openModal('visualmira')">View Details</button>
+        </div>
       </div>
     </section>
 
@@ -589,6 +597,58 @@
     </div>
   </div>
 
+  <!-- VisualMira Project Modal -->
+  <div id="visualmira" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('visualmira')">&times;</span>
+      <h2>VisualMira — 1st Place</h2>
+
+      <div class="project-image">
+        Add project image here later<br>
+        Example: screenshots/visualmira.png
+      </div>
+
+      <h3>Project Description</h3>
+      <p>
+        Group project developed in collaboration with the industry partner Leica as part of a virtual product development challenge. The project focused on creating a Python-based software simulation for reticles, allowing different designs to be evaluated before deciding whether they should be manufactured.
+      </p>
+
+      <p>
+        The goal was to reduce development cost and time by giving teams a way to assess reticle concepts digitally before moving to physical production. In addition to the technical development, I was responsible for presenting the project pitch to companies, professors, and fellow students. The project achieved 1st place in the University’s Virtual Product Development Event.
+      </p>
+
+      <div class="details-grid">
+        <div class="detail-box">
+          <h4>Objective</h4>
+          <p>
+            Develop a practical software tool to simulate and evaluate reticle designs before manufacturing, supporting faster product decisions and reducing unnecessary prototyping costs in collaboration with an industry partner.
+          </p>
+        </div>
+
+        <div class="detail-box">
+          <h4>Skills Learned</h4>
+          <span class="tag">Python</span>
+          <span class="tag">Software Simulation</span>
+          <span class="tag">Product Development</span>
+          <span class="tag">Industry Collaboration</span>
+          <span class="tag">Virtual Prototyping</span>
+          <span class="tag">Technical Presentation</span>
+          <span class="tag">Project Pitching</span>
+          <span class="tag">User-Focused Design</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Problem Solving</span>
+        </div>
+
+        <div class="detail-box">
+          <h4>Main Difficulties</h4>
+          <p>
+            The main challenges involved translating a real product development need into a useful software simulation, defining which reticle features should be represented, and making the tool clear enough to support decision-making before manufacturing. Another important difficulty was communicating the technical value of the solution to different audiences, including industry representatives, professors, and students, during the project pitch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = "block";
@@ -612,5 +672,4 @@
   </script>
 
 </body>
-</html>
 </html>
