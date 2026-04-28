@@ -348,17 +348,17 @@
 
     <section id="about">
       <h2>About Me</h2>
-          <p>
-            I am a mechatronics engineer with a strong interest in robotics, mechanical design, and product development, particularly in environments where systems need to work reliably outside controlled settings. I enjoy building and iterating on physical systems, from early concepts to functional prototypes, combining mechanical design, embedded control, and hands-on testing to improve performance.
-          </p>
-        
-          <p>
-            My work is driven by a practical, cross-disciplinary approach. I am comfortable moving between mechanical, electrical, and software components to understand how a system behaves as a whole, identify issues, and refine solutions. I tend to take full ownership of projects, with a focus on making designs that are not only functional but also robust and testable in real-world conditions.
-          </p>
-        
-          <p>
-            I am particularly interested in roles related to robotics, autonomous systems, and early-stage product development, where I can contribute to designing, building, and improving systems that go beyond theory and deliver tangible results.
-          </p>
+      <p>
+        I am a mechatronics engineer with a strong interest in robotics, mechanical design, and product development, particularly in environments where systems need to work reliably outside controlled settings. I enjoy building and iterating on physical systems, from early concepts to functional prototypes, combining mechanical design, embedded control, and hands-on testing to improve performance.
+      </p>
+
+      <p>
+        My work is driven by a practical, cross-disciplinary approach. I am comfortable moving between mechanical, electrical, and software components to understand how a system behaves as a whole, identify issues, and refine solutions. I tend to take full ownership of projects, with a focus on making designs that are not only functional but also robust and testable in real-world conditions.
+      </p>
+
+      <p>
+        I am particularly interested in roles related to robotics, autonomous systems, and early-stage product development, where I can contribute to designing, building, and improving systems that go beyond theory and deliver tangible results.
+      </p>
     </section>
 
     <section id="projects">
@@ -366,12 +366,11 @@
 
       <div class="projects-grid">
         <div class="project">
-          <h3>Nutrition Tracking App</h3>
+          <h3>MSc Thesis — Human-Robot Collaboration</h3>
           <p>
-            A Python and Flask web application for tracking calories, protein,
-            carbohydrates, fat and sugar.
+            A bioinspired robotic architecture for flexible decision-making and error monitoring in human-robot collaborative assembly.
           </p>
-          <button onclick="openModal('nutrition')">View Details</button>
+          <button onclick="openModal('thesis')">View Details</button>
         </div>
 
         <div class="project">
@@ -427,47 +426,55 @@
     <p>© 2026 Hugo Torres. All rights reserved.</p>
   </footer>
 
-  <!-- Nutrition Project Modal -->
-  <div id="nutrition" class="modal">
+  <!-- MSc Thesis Project Modal -->
+  <div id="thesis" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('nutrition')">&times;</span>
-      <h2>Nutrition Tracking App</h2>
+      <span class="close" onclick="closeModal('thesis')">&times;</span>
+      <h2>Flexible Decision-Making and Error Monitoring in Human-Robot Collaboration</h2>
 
       <div class="project-image">
         Add project image here later<br>
-        Example: screenshots/nutrition-app.png
+        Example: screenshots/msc-thesis-robotics.png
       </div>
 
       <h3>Project Description</h3>
       <p>
-        A Python and Flask web application for tracking calories, protein,
-        carbohydrates, fat and sugar. The app allows users to create profiles,
-        define goals and register daily food consumption.
+        MSc Thesis graded 20/20, focused on the development of a bioinspired cognitive architecture for flexible decision-making and error monitoring in human-robot collaboration. The project addressed a collaborative assembly task between a human and a robot, using Dynamic Neural Fields to represent task states, support action selection, and detect errors during interaction.
+      </p>
+
+      <p>
+        The architecture was first developed and simulated in MATLAB. Learning from observation was used to allow the robot to learn the assembly sequence and associations between different architectural layers. Real-time communication with RAMBO, an anthropomorphic robotic platform with two KUKA arms, was established through a Python script using ROS 2. Complementary robot action trajectories were generated with a C++ script and MoveIt2, and a speech synthesizer was integrated through MATLAB to support more natural human-robot interaction.
       </p>
 
       <div class="details-grid">
         <div class="detail-box">
           <h4>Objective</h4>
           <p>
-            Create a simple and practical tool to help users track their daily nutrition
-            and compare their consumption with predefined goals.
+            Design and validate a robotic decision-making architecture capable of monitoring task execution, detecting errors, learning assembly sequences from observation, and supporting flexible collaboration between a human and a robot in a shared assembly scenario.
           </p>
         </div>
 
         <div class="detail-box">
           <h4>Skills Learned</h4>
+          <span class="tag">MATLAB</span>
+          <span class="tag">ROS 2</span>
           <span class="tag">Python</span>
-          <span class="tag">Flask</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
+          <span class="tag">C++</span>
+          <span class="tag">MoveIt2</span>
+          <span class="tag">Dynamic Neural Fields</span>
+          <span class="tag">Learning from Observation</span>
+          <span class="tag">Human-Robot Collaboration</span>
+          <span class="tag">Cognitive Robotics</span>
+          <span class="tag">Robot Motion Planning</span>
+          <span class="tag">System Integration</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Project Ownership</span>
         </div>
 
         <div class="detail-box">
           <h4>Main Difficulties</h4>
           <p>
-            Managing user data, calculating daily totals correctly and creating a clean
-            structure for food registration and goal comparison.
+            The main challenges involved designing stable interactions between multiple Dynamic Neural Field layers, tuning the architecture so that decisions and error signals emerged correctly, and validating the system across different task conditions. Another key difficulty was integrating several technologies into a single robotic pipeline, including MATLAB simulations, ROS 2 communication, Python scripts, C++ motion generation, MoveIt2, and the physical dual-arm KUKA robotic platform.
           </p>
         </div>
       </div>
@@ -587,5 +594,7 @@
     };
   </script>
 
+</body>
+</html>
 </body>
 </html>
