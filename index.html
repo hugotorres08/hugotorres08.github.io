@@ -82,6 +82,22 @@
       box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
       background: #f8fafc;
     }
+
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+    
+    .contact-info a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    
     
     header h1 {
       font-size: clamp(42px, 8vw, 72px);
@@ -721,9 +737,20 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <a href="mailto:hugomctorres@gmail.com">hugomctorres@gmail.com</a>
-      <a href="https://www.linkedin.com/in/hugo-torres-229652214/" target="_blank">LinkedIn</a>
-    </section>
+    
+    <div class="contact-info">
+      <p>
+        Email:
+        <a href="mailto:hugomctorres@gmail.com">hugomctorres@gmail.com</a>
+      </p>
+    
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/hugo-torres-229652214/" target="_blank" rel="noopener noreferrer">
+          linkedin.com/in/hugo-torres-229652214
+        </a>
+      </p>
+    </div>
 
   </main>
 
