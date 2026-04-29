@@ -73,7 +73,16 @@
       border-radius: 16px;
       background: #f8fafc;
     }
-  
+
+    .project-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+      background: #f8fafc;
+    }
+    
     header h1 {
       font-size: clamp(42px, 8vw, 72px);
       margin: 0 0 15px;
@@ -565,10 +574,13 @@
       <h2>Smart Farming System</h2>
 
       <div class="project-gallery">
-        <video controls>
-          <source src="assets/projects/smart-farming-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/4cDruUDePFg?modestbranding=1&rel=0"
+          title="Smart Farming System video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
 
       <h3>Project Description</h3>
