@@ -1,0 +1,14 @@
+{
+  "name": "hugotorres-portfolio",
+  "version": "1.0.0",
+  "description": "Personal website and mechatronics engineering portfolio for Hugo Torres",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static HTML portfolio application - no build step required'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

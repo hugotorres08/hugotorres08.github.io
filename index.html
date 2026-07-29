@@ -153,7 +153,7 @@
 
     main {
       max-width: 1050px;
-      margin: -50px auto 0;
+      margin: 35px auto 0;
       padding: 0 20px;
       position: relative;
       z-index: 2;
@@ -166,6 +166,32 @@
       box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
       margin-bottom: 30px;
       border: 1px solid #e5e7eb;
+      scroll-margin-top: 85px;
+    }
+
+    section#projects {
+      border-top: 4px solid #2563eb;
+      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .section-desc {
+      color: #475569;
+      font-size: 15.5px;
+      margin-top: -10px;
+      margin-bottom: 24px;
     }
 
     h2 {
@@ -188,41 +214,107 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
     }
 
     .project {
-      padding: 24px;
+      padding: 0;
       border-radius: 16px;
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.12);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(37, 99, 235, 0.15);
     }
 
-    .project h3 {
+    .project-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 195px;
+      background: #f1f5f9;
+      overflow: hidden;
+    }
+
+    .project-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .project-img-wrapper img.contain-fit {
+      object-fit: contain;
+      padding: 12px;
+      background: #e2e8f0;
+    }
+
+    .project:hover .project-img-wrapper img {
+      transform: scale(1.06);
+    }
+
+    .project-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .project-badge.award {
+      background: linear-gradient(135deg, #d97706, #b45309);
+    }
+
+    .project-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .project-body h3 {
       margin-top: 0;
-      margin-bottom: 10px;
-      color: #1d4ed8;
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: #0f172a;
+      line-height: 1.4;
     }
 
-    .project button {
-      margin-top: 12px;
+    .project-body p {
+      margin-bottom: 16px;
+      color: #475569;
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+
+    .project-btn {
+      width: 100%;
       background: #2563eb;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 999px;
+      padding: 11px 16px;
+      border-radius: 10px;
       font-weight: 700;
+      font-size: 14px;
       cursor: pointer;
+      transition: background 0.2s ease;
+      text-align: center;
     }
 
-    .project button:hover {
+    .project-btn:hover {
       background: #1d4ed8;
     }
 
@@ -447,7 +539,219 @@
       color: #1d4ed8;
     }
 
+    .drawing-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0 20px 0;
+    }
+
+    .drawing-btn {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1.5px solid #bfdbfe;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .drawing-btn:hover {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+    }
+
+    .drawings-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .drawing-preview-card {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .drawing-preview-card:hover {
+      border-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.12);
+    }
+
+    .drawing-preview-card img {
+      width: 100%;
+      height: 135px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .drawing-preview-card span {
+      display: block;
+      margin-top: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .image-viewer-modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      overflow: auto;
+    }
+
+    .image-viewer-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 90vh;
+    }
+
+    .image-viewer-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: rgba(30, 41, 59, 0.9);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .image-viewer-toolbar h3 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .image-viewer-close {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .image-viewer-close:hover {
+      background: #dc2626;
+    }
+
+    .image-viewer-body {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .image-viewer-body img {
+      max-width: 100%;
+      max-height: 84vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      background: #ffffff;
+    }
+
+    .profile-avatar {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      background: #1e293b;
+    }
+
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .about-photo-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    }
+
+    .about-photo-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .about-photo-caption {
+      margin-top: 10px;
+      padding: 4px 0;
+    }
+
+    .about-photo-caption strong {
+      display: block;
+      font-size: 15px;
+      color: #0f172a;
+    }
+
+    .about-photo-caption span {
+      display: block;
+      font-size: 12.5px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
     @media (max-width: 700px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .about-photo-card {
+        max-width: 240px;
+        margin: 0 auto 10px;
+      }
+
       nav a {
         display: inline-block;
         margin: 6px 8px;
@@ -458,7 +762,7 @@
       }
 
       main {
-        margin-top: -30px;
+        margin-top: 20px;
       }
 
       .modal-content {
@@ -480,13 +784,15 @@
 
   <header>
     <div class="hero">
+      <div class="profile-avatar">
+        <img src="hugo.jpg" alt="Hugo Torres - Mechatronics & Robotics Engineer">
+      </div>
       <span>Personal Website</span>
       <h1>Hugo Torres</h1>
       <p>Mechanical & Mechatronics Engineer | Robotics Researcher</p>
 
       <div class="hero-buttons">
         <a class="primary-btn" href="#projects">View Projects</a>
-        <a class="secondary-btn" href="cv.pdf" target="_blank">Download CV</a>
       </div>
     </div>
   </header>
@@ -494,10 +800,9 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#academic-background">Academic Background</a>
+    <a href="#education">Education</a>
     <a href="#certificates">Certificates</a>
     <a href="#experience">Experience</a>
-    <a href="#cv">CV</a>
     <a href="#skills">Skills</a>
     <a href="#additional-information">Additional Information</a>
     <a href="#contact">Contact</a>
@@ -507,79 +812,158 @@
 
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        I am a mechatronics engineer with a strong interest in robotics, mechanical design, and product development, particularly in environments where systems need to work reliably outside controlled settings. I enjoy building and iterating on physical systems, from early concepts to functional prototypes, combining mechanical design, embedded control, and hands-on testing to improve performance.
-      </p>
-
-      <p>
-        My work is driven by a practical, cross-disciplinary approach. I am comfortable moving between mechanical, electrical, and software components to understand how a system behaves as a whole, identify issues, and refine solutions. I tend to take full ownership of projects, with a focus on making designs that are not only functional but also robust and testable in real-world conditions.
-      </p>
-
-      <p>
-        I am particularly interested in roles related to robotics, autonomous systems, and early-stage product development, where I can contribute to designing, building, and improving systems that go beyond theory and deliver tangible results.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-        <div class="project">
-          <h3>MSc Thesis — Human-Robot Collaboration</h3>
-          <p>
-            A bioinspired robotic architecture for flexible decision-making and error monitoring in human-robot collaborative assembly.
-          </p>
-          <button onclick="openModal('thesis')">View Details</button>
+      <div class="about-grid">
+        <div class="about-photo-card">
+          <img src="hugo.jpg" alt="Hugo Torres - Mechatronics Engineer">
+          <div class="about-photo-caption">
+            <strong>Hugo Torres</strong>
+            <span>Mechatronics & Robotics • Portugal 🇵🇹</span>
+          </div>
         </div>
-
-        <div class="project">
-          <h3>Smart Farming System</h3>
+        <div class="about-content">
           <p>
-            An IoT-based control station for monitoring and automating light exposure and irrigation in a smart agriculture application.
+            I am a mechatronics engineer with a strong interest in robotics, mechanical design, and product development, particularly in environments where systems need to work reliably outside controlled settings. I enjoy building and iterating on physical systems, from early concepts to functional prototypes, combining mechanical design, embedded control, and hands-on testing to improve performance.
           </p>
-          <button onclick="openModal('smart-farming')">View Details</button>
-        </div>
 
-        <div class="project">
-          <h3>Race Party — 3rd Place</h3>
           <p>
-            A spring-powered racing car designed, prototyped, and optimized for a 5-meter speed competition under strict engineering constraints.
+            My work is driven by a practical, cross-disciplinary approach. I am comfortable moving between mechanical, electrical, and software components to understand how a system behaves as a whole, identify issues, and refine solutions. I tend to take full ownership of projects, with a focus on making designs that are not only functional but also robust and testable in real-world conditions.
           </p>
-          <button onclick="openModal('race-party')">View Details</button>
-        </div>
 
-        <div class="project">
-          <h3>VisualMira — 1st Place</h3>
           <p>
-            A Python-based reticle simulation tool developed with Leica to support product decisions and reduce prototyping cost and time.
+            I am particularly interested in roles related to robotics, autonomous systems, and early-stage product development, where I can contribute to designing, building, and improving systems that go beyond theory and deliver tangible results.
           </p>
-          <button onclick="openModal('visualmira')">View Details</button>
-        </div>
-
-        <div class="project">
-          <h3>Manufacturing of Machined Part</h3>
-          <p>
-            A hands-on manufacturing project focused on producing a mechanical component from a technical drawing using turning and milling processes.
-          </p>
-          <button onclick="openModal('machined-part')">View Details</button>
-        </div>
-
-        <div class="project">
-          <h3>Design and Prototyping of a Projectile Launcher</h3>
-          <p>
-            A first-year mechanical design project involving a spring-powered projectile launcher with a three-bar linkage mechanism.
-          </p>
-          <button onclick="openModal('projectile-launcher')">View Details</button>
         </div>
       </div>
     </section>
 
-    <section id="academic-background">
-      <h2>Academic Background</h2>
+    <section id="projects">
+      <span class="section-badge">Core Portfolio</span>
+      <h2>Featured Projects</h2>
+      <p class="section-desc">
+        Key mechatronics, robotics, and engineering projects showcasing mechanical design, software simulation, IoT control, and functional prototyping.
+      </p>
+
+      <div class="projects-grid">
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img src="thesis-1.jpg" alt="MSc Thesis - Human-Robot Collaboration">
+            <span class="project-badge">Robotics & AI</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>MSc Thesis - Human-Robot Collaboration</h3>
+              <p>
+                A bioinspired robotic architecture for flexible decision-making and error monitoring in human-robot collaborative assembly.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('thesis')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img class="contain-fit" src="Robot3D.png" alt="SolidWorks Robotic Manipulator 3D Model" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/Xc7dsjRnxc0/hqdefault.jpg';">
+            <span class="project-badge">SolidWorks & CAD</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Robotic Manipulator 3D Modeling & 2D Drawings</h3>
+              <p>
+                3D CAD modeling of a robotic manipulator in SolidWorks with articulated joints and complete 2D engineering drawings.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('robot-manipulator')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img src="https://img.youtube.com/vi/4cDruUDePFg/hqdefault.jpg" alt="Smart Farming System preview">
+            <span class="project-badge">IoT & Automation</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Smart Farming System</h3>
+              <p>
+                An IoT-based control station for monitoring and automating light exposure and irrigation in a smart agriculture application.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('smart-farming')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img src="race-party-1.jpg" alt="Race Party racing car">
+            <span class="project-badge award">3rd Place</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Race Party — 3rd Place</h3>
+              <p>
+                A spring-powered racing car designed, prototyped, and optimized for a 5-meter speed competition under strict engineering constraints.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('race-party')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img src="visualmira-1.jpg" alt="VisualMira reticle simulation tool">
+            <span class="project-badge award">1st Place</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>VisualMira - 1st Place</h3>
+              <p>
+                A Python-based reticle simulation tool developed with Leica to support product decisions and reduce prototyping cost and time.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('visualmira')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img src="machined-part-1.jpg" alt="Manufacturing of Machined Part">
+            <span class="project-badge">Machining & CAD</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Manufacturing of Machined Part</h3>
+              <p>
+                A hands-on manufacturing project focused on producing a mechanical component from a technical drawing using turning and milling processes.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('machined-part')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-wrapper">
+            <img src="projectile-launcher-1.jpg" alt="Design and Prototyping of a Projectile Launcher">
+            <span class="project-badge">CAD & Mechanisms</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Design and Prototyping of a Projectile Launcher</h3>
+              <p>
+                A first-year mechanical design project involving a spring-powered projectile launcher with a three-bar linkage mechanism.
+              </p>
+            </div>
+            <button class="project-btn" onclick="openModal('projectile-launcher')">View Details →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
 
       <div class="timeline">
         <div class="timeline-item">
-          <h3>Integrated Master’s in Mechanical Engineering — Specialization in Mechatronic Systems</h3>
+          <h3>Integrated Master's in Mechanical Engineering - Specialization in Mechatronic Systems</h3>
           <p class="timeline-meta">University of Minho, Portugal | Oct 2020 - Mar 2026 | Grade: 16/20</p>
           <p>
             Developed a strong foundation in mechanical engineering, mechatronics, automation, mechanical design, control, and system integration. The programme included practical projects involving CAD, sensors, actuators, prototyping, and testing of mechatronic systems.
@@ -594,7 +978,7 @@
         </div>
 
         <div class="timeline-item">
-          <h3>Specialization Course — Collaborative and Flexible Robotics for Smart Manufacturing</h3>
+          <h3>Specialization Course - Collaborative and Flexible Robotics for Smart Manufacturing</h3>
           <p class="timeline-meta">University of Minho, Portugal | Mar 2025 - Jul 2025 | Grade: 18/20</p>
           <p>
             Completed advanced training in collaborative and flexible robotics for industrial applications, strengthening knowledge in cobots, mobile robots, manipulation, automation, smart manufacturing, and robotic system integration.
@@ -679,8 +1063,23 @@
         </div>
 
         <div class="timeline-item">
+          <h3>Catering & Event Staff</h3>
+          <p class="timeline-meta">Divinal Catering | Jun 2026 - Present</p>
+          <p>
+            Work weekend wedding events handling hands-on setup, table service, logistics, and teardown during long shifts up to 24 hours. Develops strong physical endurance, teamwork under pressure, quick adaptability, and practical problem-solving that transfer directly to demanding engineering environments.
+          </p>
+          <div>
+            <span class="tag">Event Logistics</span>
+            <span class="tag">High-Endurance Operations</span>
+            <span class="tag">Crisis & Time Management</span>
+            <span class="tag">Team Coordination</span>
+            <span class="tag">Adaptability & Resilience</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
           <h3>Waiter</h3>
-          <p class="timeline-meta">Dona Petisca Restaurant | Mar 2024 - Sep 2024</p>
+          <p class="timeline-meta">Dona Petisca Restaurant | Mar 2023 - Sep 2023; Mar 2024 - Sep 2024</p>
           <p>
             Worked in a fast-paced environment while completing MSc studies, developing resilience, multitasking, communication, rapid problem-solving, and the ability to perform under pressure.
           </p>
@@ -695,12 +1094,6 @@
       </div>
     </section>
 
-    <section id="cv">
-      <h2>CV</h2>
-      <p>You can download my CV using the button below.</p>
-      <a class="button" href="cv.pdf" target="_blank">Download CV</a>
-    </section>
-
     <section id="skills">
       <h2>Skills</h2>
     
@@ -711,6 +1104,8 @@
         <span>Cross-Disciplinary Thinking</span>
         <span>Teamwork</span>
         <span>Fast Learning & Adaptability</span>
+        <span>Attention to Detail</span>
+        <span>Analytical Thinking</span>
       </div>
     
       <h3>Hard Skills</h3>
@@ -720,12 +1115,18 @@
         <span>Mechatronics System Integration</span>
         <span>Prototyping & Manufacturing</span>
         <span>Automation & Control</span>
+        <span>FEA (Finite Element Analysis)</span>
+        <span>GD&T</span>
       </div>
     
       <h3>Tools & Software</h3>
       <div class="skills">
-        <span>Python, MATLAB, C++</span>
-        <span>Fusion 360, Ansys</span>
+        <span>MATLAB / Simulink</span>
+        <span>SolidWorks</span>
+        <span>Fusion 360</span>
+        <span>Ansys</span>
+        <span>MS Office / Excel</span>
+        <span>Python, C++</span>
         <span>Arduino, ESP32</span>
         <span>ROS 2, Gazebo</span>
         <span>Git, Linux</span>
@@ -737,13 +1138,39 @@
 
       <div class="info-grid">
         <div class="info-card">
+          <h3>Work Availability & Mobility</h3>
+          <p>
+            European Union Citizen (Portugal). Fully available and eager to relocate internationally to work across different countries, dynamic engineering environments, and diverse cultures.
+          </p>
+          <div>
+            <span class="tag">EU Citizen (Portugal 🇵🇹)</span>
+            <span class="tag">International Relocation</span>
+            <span class="tag">Global Mobility</span>
+          </div>
+        </div>
+
+        <div class="info-card">
           <h3>Languages</h3>
           <p>
             Comfortable communicating in both Portuguese and English in academic, technical, and professional contexts.
           </p>
           <div>
-            <span class="tag">Portuguese — Native</span>
-            <span class="tag">English — Fluent</span>
+            <span class="tag">Portuguese - Native</span>
+            <span class="tag">English - Fluent</span>
+            <span class="tag">Spanish - Basic</span>
+            <span class="tag">German - Beginner (Active Learning)</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Mentorship Program</h3>
+          <p>
+            Participated in the University of Minho International and National Mentorship Program, gaining valuable career guidance, industry transition strategies, and professional development insights from experienced mentors.
+          </p>
+          <div>
+            <span class="tag">Career Guidance</span>
+            <span class="tag">Professional Development</span>
+            <span class="tag">Industry Insights</span>
           </div>
         </div>
 
@@ -759,6 +1186,16 @@
             <span class="tag">Commitment</span>
           </div>
         </div>
+
+        <div class="info-card">
+          <h3>Driver's License</h3>
+          <p>
+            Hold a full driver's license with complete mobility for commuting and business travel.
+          </p>
+          <div>
+            <span class="tag">Category B License</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -766,6 +1203,11 @@
       <h2>Contact</h2>
     
       <div class="contact-info">
+        <p>
+          Location:
+          <strong>Portugal 🇵🇹</strong>
+        </p>
+
         <p>
           Email:
           <a href="mailto:hugomctorres@gmail.com">hugomctorres@gmail.com</a>
@@ -799,8 +1241,8 @@
       <h2>Flexible Decision-Making and Error Monitoring in Human-Robot Collaboration</h2>
 
       <div class="project-gallery">
-        <img src="thesis-1.jpg" alt="MSc Thesis image 1">
-        <img src="thesis-2.jpg" alt="MSc Thesis image 2">
+        <img src="thesis-1.jpg" alt="MSc Thesis - Bioinspired Cognitive Architecture">
+        <img src="thesis-2.jpg" alt="MSc Thesis - Dynamic Neural Fields Architecture">
       </div>
 
       <h3>Project Description</h3>
@@ -838,6 +1280,95 @@
           <h4>Main Difficulties</h4>
           <p>
             The main challenges involved designing stable interactions between multiple Dynamic Neural Field layers, tuning the architecture so that decisions and error signals emerged correctly, and validating the system across different task conditions. Another key difficulty was integrating several technologies into a single robotic pipeline, including MATLAB simulations, ROS 2 communication, Python scripts, C++ motion generation, MoveIt2, and the physical dual-arm KUKA robotic platform.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="robot-manipulator" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('robot-manipulator')">&times;</span>
+      <h2>SolidWorks Robotic Manipulator 3D Modeling & 2D Engineering Drawings</h2>
+
+      <div class="project-gallery">
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/Xc7dsjRnxc0?modestbranding=1&rel=0"
+          title="SolidWorks Robotic Manipulator simulation video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <img src="Robot3D.png" alt="3D Model of Robotic Manipulator in SolidWorks" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/Xc7dsjRnxc0/hqdefault.jpg';">
+      </div>
+
+      <h3>2D Engineering Drawings (Interactive View)</h3>
+      <p style="margin-bottom: 12px; color: #475569; font-size: 14.5px;">
+        Click any button below to view and inspect the full high-resolution technical drawing sheet:
+      </p>
+
+      <div class="drawing-buttons">
+        <button class="drawing-btn" onclick="openImageViewer('2D_Drawing_Robot.jpg', '2D Technical Drawing — Complete Robot Assembly')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 3v18"/><path d="M8 8h4"/><path d="M8 12h4"/><path d="M8 16h4"/></svg>
+          View 2D Drawing: Robot Assembly
+        </button>
+
+        <button class="drawing-btn" onclick="openImageViewer('2D_Drawing_Base.jpg', '2D Technical Drawing — Base Component')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 3v18"/><path d="M8 8h4"/><path d="M8 12h4"/><path d="M8 16h4"/></svg>
+          View 2D Drawing: Base
+        </button>
+
+        <button class="drawing-btn" onclick="openImageViewer('2D_Drawing_Link1.jpg', '2D Technical Drawing — Link 1 Component')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 3v18"/><path d="M8 8h4"/><path d="M8 12h4"/><path d="M8 16h4"/></svg>
+          View 2D Drawing: Link 1
+        </button>
+      </div>
+
+      <div class="drawings-preview-grid">
+        <div class="drawing-preview-card" onclick="openImageViewer('2D_Drawing_Robot.jpg', '2D Technical Drawing — Complete Robot Assembly')">
+          <img src="2D_Drawing_Robot.jpg" alt="2D Drawing Robot Assembly Preview">
+          <span>Robot Assembly Sheet</span>
+        </div>
+        <div class="drawing-preview-card" onclick="openImageViewer('2D_Drawing_Base.jpg', '2D Technical Drawing — Base Component')">
+          <img src="2D_Drawing_Base.jpg" alt="2D Drawing Base Component Preview">
+          <span>Base Component Sheet</span>
+        </div>
+        <div class="drawing-preview-card" onclick="openImageViewer('2D_Drawing_Link1.jpg', '2D Technical Drawing — Link 1 Component')">
+          <img src="2D_Drawing_Link1.jpg" alt="2D Drawing Link 1 Preview">
+          <span>Link 1 Component Sheet</span>
+        </div>
+      </div>
+
+      <h3>Project Description</h3>
+      <p>
+        Personal engineering project focused on designing a robotic manipulator from scratch in SolidWorks and generating complete production 2D technical drawings. The work involved definition of link geometries, setting joint mates, verifying mechanical clearances during movement, and producing standardized engineering drawings ready for manufacturing.
+      </p>
+      <p>
+        Each part was modeled taking manufacturing processes and assembly fits into account. Detailed 2D drawing sheets were created with complete dimensioning, section cuts, and projected orthographic views to ensure reliable fabrication and assembly.
+      </p>
+
+      <div class="details-grid">
+        <div class="detail-box">
+          <h4>Objective</h4>
+          <p>
+            Build a complete 3D parametric assembly model of a robotic manipulator in SolidWorks, evaluate articulated joint clearances, and execute standardized 2D engineering drawings for individual parts and the final assembly.
+          </p>
+        </div>
+
+        <div class="detail-box">
+          <h4>Skills Learned</h4>
+          <span class="tag">SolidWorks</span>
+          <span class="tag">3D CAD Modeling</span>
+          <span class="tag">2D Technical Drawings</span>
+          <span class="tag">Mechanical Design</span>
+          <span class="tag">Assembly Kinematics</span>
+          <span class="tag">Design for Manufacturing</span>
+        </div>
+
+        <div class="detail-box">
+          <h4>Main Difficulties</h4>
+          <p>
+            Establishing accurate mechanical mates and joint constraints so the assembly articulated smoothly without internal collisions. Another key challenge was organizing detail views, section cuts, and dimensions across 2D drawing sheets clearly without visual overcrowding.
           </p>
         </div>
       </div>
@@ -1103,6 +1634,18 @@
     </div>
   </div>
 
+  <div id="image-viewer-modal" class="image-viewer-modal" onclick="closeImageViewer(event)">
+    <div class="image-viewer-wrapper">
+      <div class="image-viewer-toolbar">
+        <h3 id="image-viewer-title">2D Technical Drawing</h3>
+        <button class="image-viewer-close" onclick="closeImageViewerDirect()">&times; Close</button>
+      </div>
+      <div class="image-viewer-body">
+        <img id="image-viewer-img" src="" alt="Enlarged 2D Technical Drawing Sheet">
+      </div>
+    </div>
+  </div>
+
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = "block";
@@ -1112,6 +1655,25 @@
     function closeModal(id) {
       document.getElementById(id).style.display = "none";
       document.body.style.overflow = "auto";
+    }
+
+    function openImageViewer(src, title) {
+      document.getElementById('image-viewer-img').src = src;
+      document.getElementById('image-viewer-title').innerText = title;
+      document.getElementById('image-viewer-modal').style.display = 'block';
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeImageViewerDirect() {
+      document.getElementById('image-viewer-modal').style.display = 'none';
+      document.body.style.overflow = "auto";
+    }
+
+    function closeImageViewer(event) {
+      if (event.target.id === 'image-viewer-modal' || event.target.classList.contains('image-viewer-body')) {
+        document.getElementById('image-viewer-modal').style.display = 'none';
+        document.body.style.overflow = "auto";
+      }
     }
 
     window.onclick = function(event) {

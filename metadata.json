@@ -1,0 +1,8 @@
+{
+  "name": "Hugo Torres Portfolio",
+  "description": "Personal website and mechatronics engineering portfolio for Hugo Torres",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
