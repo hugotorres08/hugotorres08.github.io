@@ -98,7 +98,6 @@
       text-decoration: underline;
     }
     
-    
     header h1 {
       font-size: clamp(42px, 8vw, 72px);
       margin: 0 0 15px;
@@ -218,7 +217,7 @@
       color: white;
       border: none;
       padding: 10px 15px;
-      border-radius: 9px;
+      border-radius: 999px;
       font-weight: 700;
       cursor: pointer;
     }
@@ -327,6 +326,23 @@
 
     .button:hover {
       transform: translateY(-2px);
+    }
+
+    .cert-btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 12px;
+      transition: background 0.2s ease;
+    }
+
+    .cert-btn:hover {
+      background: #1d4ed8;
     }
 
     #contact p {
@@ -466,7 +482,7 @@
     <div class="hero">
       <span>Personal Website</span>
       <h1>Hugo Torres</h1>
-      <p>Mechatronics Engineer | Robotics Researcher | AI & Robotics</p>
+      <p>Mechanical & Mechatronics Engineer | Robotics Researcher</p>
 
       <div class="hero-buttons">
         <a class="primary-btn" href="#projects">View Projects</a>
@@ -479,6 +495,7 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#academic-background">Academic Background</a>
+    <a href="#certificates">Certificates</a>
     <a href="#experience">Experience</a>
     <a href="#cv">CV</a>
     <a href="#skills">Skills</a>
@@ -607,6 +624,40 @@
       </div>
     </section>
 
+    <section id="certificates">
+      <h2>Certificates & Courses</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Integrated Master's Degree</h3>
+          <p class="timeline-meta">Integrated Master's in Mechanical Engineering, Specialization in Mechatronic Systems</p>
+          <p>GPA: 16/20</p>
+          <a class="cert-btn" href="msc-degree-certificate.pdf" target="_blank">View Certificate (PDF)</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Specialization Course</h3>
+          <p class="timeline-meta">Collaborative and Flexible Robotics for Smart Manufacturing</p>
+          <p>GPA: 18/20</p>
+          <a class="cert-btn" href="specialization-robotics-certificate.pdf" target="_blank">View Certificate (PDF)</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Generative AI Essentials</h3>
+          <p class="timeline-meta">Career Essentials in Generative AI by Microsoft and LinkedIn</p>
+          <p>Professional Certification in Generative AI fundamentals and application.</p>
+          <a class="cert-btn" href="generative-ai-certificate.pdf" target="_blank">View Certificate (PDF)</a>
+        </div>
+
+        <div class="info-card">
+          <h3>ClaudeCode101</h3>
+          <p class="timeline-meta">Anthropic</p>
+          <p>Course completion certification on AI-assisted coding and development workflows.</p>
+          <a class="cert-btn" href="claudecode101-certificate.pdf" target="_blank">View Certificate (PDF)</a>
+        </div>
+      </div>
+    </section>
+
     <section id="experience">
       <h2>Experience</h2>
 
@@ -714,19 +765,27 @@
     <section id="contact">
       <h2>Contact</h2>
     
-    <div class="contact-info">
-      <p>
-        Email:
-        <a href="mailto:hugomctorres@gmail.com">hugomctorres@gmail.com</a>
-      </p>
+      <div class="contact-info">
+        <p>
+          Email:
+          <a href="mailto:hugomctorres@gmail.com">hugomctorres@gmail.com</a>
+        </p>
+
+        <p>
+          GitHub:
+          <a href="https://github.com/hugotorres08" target="_blank" rel="noopener noreferrer">
+            github.com/hugotorres08
+          </a>
+        </p>
     
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/hugo-torres-229652214/" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/hugo-torres-229652214
-        </a>
-      </p>
-    </div>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/hugo-torres-229652214/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/hugo-torres-229652214
+          </a>
+        </p>
+      </div>
+    </section>
 
   </main>
 
